@@ -36,10 +36,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "analyze": "cross-env ANALYZE=true craco build",
+    "optimize": "node scripts/optimize-build.js",
+    "check-duplicates": "node scripts/duplicate-package-check.js",
+    "dedupe": "npm dedupe && npm run check-duplicates"
   },
   "eslintConfig": {
     "extends": [
@@ -60,9 +64,15 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.21",
+    "chalk": "^5.4.1",
+    "cross-env": "^7.0.3",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
     "postcss": "^8.5.3",
     "prettier": "3.5.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
