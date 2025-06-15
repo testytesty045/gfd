@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 .form-section {
   padding: 40px;
   max-width: 900px;
@@ -37,6 +35,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -187,13 +186,13 @@ button[type="submit"]:disabled {
     width: 90%;
     max-width: 500px;
   }
-  
+
   .form-row {
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
-  
+
   .form-section h2 {
     font-size: 20px;
     text-align: center;
@@ -204,7 +203,7 @@ button[type="submit"]:disabled {
     width: 100%;
     margin: 0 auto;
   }
-  
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -218,7 +217,7 @@ button[type="submit"]:disabled {
     max-width: 100%;
     margin: 20px auto 0;
   }
-  
+
   .custom-toast {
     top: 80px;
     right: 10px;

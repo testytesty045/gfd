@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;700&display=swap');
-
 .hero-banner-container {
   position: relative;
   width: 100%;
@@ -32,7 +30,7 @@
   width: 928px;
   height: 237px;
   left: 68px;
-  top: 465px; 
+  top: 465px;
   background: linear-gradient(177.88deg, #1694CE 4.56%, #071326 98.24%);
 }
 
@@ -112,7 +110,7 @@
     width: 80%;
     left: 5%;
   }
-  
+
   .case-study-container {
     width: 90%;
   }
@@ -123,16 +121,16 @@
     font-size: 48px;
     line-height: 65px;
   }
-  
+
   .banner-content h2 {
     font-size: 20px;
   }
-  
+
   .case-study-content h2 {
     font-size: 40px;
     line-height: 60px;
   }
-  
+
   .case-study-content {
     padding: 20px 30px;
   }
@@ -143,22 +141,22 @@
     width: 90%;
     height: auto;
   }
-  
+
   .banner-content h1 {
     font-size: 36px;
     line-height: 48px;
   }
-  
+
   .case-study-container {
     height: auto;
     margin-top: -40px;
   }
-  
+
   .case-study-content h2 {
     font-size: 32px;
     line-height: 45px;
   }
-  
+
   .case-study-content {
     padding: 20px 25px;
   }
@@ -168,52 +166,52 @@
   .hero-section {
     height: 700px;
   }
-  
+
   .main-banner {
     width: 95%;
     left: 2.5%;
     top: 420px;
   }
-  
+
   .banner-content {
     padding: 20px 15px;
   }
-  
+
   .banner-content h1 {
     font-size: 28px;
     line-height: 38px;
   }
-  
+
   .banner-content h2 {
     font-size: 16px;
     line-height: 24px;
   }
-  
+
   .hero-banner-container {
     min-height: 600px;
   }
-  
+
   .case-study-container {
     margin-top: -30px;
     margin-bottom: 0;
   }
-  
+
   .case-study-content {
     padding: 15px;
   }
-  
+
   .case-study-content h2 {
     font-size: 24px;
     line-height: 32px;
   }
-  
+
   .case-study-content p {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 10px;
   }
-  
+
   .case-study-link {
     font-size: 16px;
   }
-} 
+}
