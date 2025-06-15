@@ -1,0 +1,87 @@
+.why-choose-us {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(rgba(32, 54, 125, 0.9), rgba(64, 74, 216, 0.8));
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.benefits {
+  padding: 80px 20px;
+  background: white;
+}
+
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.security-commitment,
+.it-success {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta {
+  background: linear-gradient(rgba(32, 54, 125, 0.9), rgba(64, 74, 216, 0.8));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: white;
+  color: var(--dgft-primary);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}

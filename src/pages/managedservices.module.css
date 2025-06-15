@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* General Styles */
+.section {
+  padding: 4rem 0;
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Background Colors */
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-primary-50 {
+  background-color: #f0f7ff;
+}
+
+.bg-secondary-900 {
+  background-color: #1e293b;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.bg-light-blue {
+  background-color: #f0f7ff;
+}
+
+/* Text Colors */
+.text-primary {
+  color: #2563eb;
+}
+
+.text-secondary-900 {
+  color: #1e293b;
+}
+
+.text-neutral-600 {
+  color: #4b5563;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Typography */
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Spacing */
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Layout */
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Decorative Elements */
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.shadow-subtle {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+/* Button Styles and Hover Effects */
+.bg-transparent {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.border-white {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.bg-transparent.border-white.text-white:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Buttons from main.css enhanced for this page */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #1e293b; 
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #0f172a;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid currentColor;
+}
+
+.btn-outline:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Benefits and Feature Card Styles */
+.benefits-section {
+  background-color: #f0f7ff;
+  padding: 4rem 0;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefits-label {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.benefits-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.benefits-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.benefit-icon {
+  color: #2563eb;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+}
+
+.benefit-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.benefit-card:hover .benefit-card-title {
+  color: #1d4ed8;
+}
+
+.benefit-card-description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Use Cases Styles */
+.use-cases-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.use-cases-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.use-cases-label {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.use-cases-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.use-cases-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.use-case-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.use-case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.use-case-header {
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.use-case-card:hover .use-case-header {
+  background-color: #0f172a;
+}
+
+.use-case-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.use-case-problem {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.use-case-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.use-case-solution-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.use-case-card:hover .use-case-solution-title {
+  color: #2563eb;
+}
+
+.use-case-solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.use-case-solution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.use-case-card:hover .use-case-solution-item {
+  transform: translateX(3px);
+}
+
+.use-case-solution-icon {
+  color: #2563eb;
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.1rem;
+}
+
+.use-case-solution-text {
+  line-height: 1.5;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* Principles Section Styles */
+.principles-section {
+  padding: 4rem 0;
+  background-color: #f0f7ff;
+}
+
+.principles-section-title {
+  font-size: 2rem;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.principle-item {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.principle-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.principle-item h3 {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.principle-item:hover h3 {
+  transform: scale(1.05);
+}
+
+.principle-item p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.principle-item:nth-child(1) h3 {
+  color: #2563eb;
+}
+
+/* More Services Section */
+.comit-more-services-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.comit-container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.comit-section-title {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 3rem;
+}
+
+.comit-text-center {
+  text-align: center;
+}
+
+.comit-services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.comit-service-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.comit-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.comit-service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.comit-service-card:hover .comit-service-icon {
+  transform: scale(1.1);
+}
+
+.comit-service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.comit-service-card:hover .comit-service-title {
+  color: #2563eb;
+}
+
+.comit-service-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.comit-network-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1 L9 4"></path><path d="M15 1 L15 4"></path><path d="M9 20 L9 23"></path><path d="M15 20 L15 23"></path></svg>');
+}
+
+.comit-server-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><circle cx="6" cy="6" r="1"></circle><circle cx="6" cy="18" r="1"></circle></svg>');
+}
+
+.comit-cloud-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>');
+}
+
+.comit-device-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><circle cx="10" cy="10" r="1"></circle><circle cx="14" cy="10" r="1"></circle><circle cx="10" cy="14" r="1"></circle><circle cx="14" cy="14" r="1"></circle></svg>');
+}
+
+.comit-database-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>');
+}
+
+.comit-security-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>');
+}
+
+/* Benefit Icons */
+.icon-dollar {
+  color: #2563eb;
+}
+
+.icon-efficiency {
+  color: #2563eb;
+}
+
+.icon-resource {
+  color: #2563eb;
+}
+
+.icon-technology {
+  color: #2563eb;
+}
+
+.icon-growth {
+  color: #2563eb;
+}
+
+/* Animations */
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-in-out;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .sm-flex-row {
+    flex-direction: row;
+  }
+  
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .comit-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .use-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .md-grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lg-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .principles-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .comit-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
