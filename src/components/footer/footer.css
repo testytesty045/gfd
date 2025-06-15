@@ -1,0 +1,382 @@
+/* Upper section with gradient background */
+.footer-background {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(28, 119, 184),
+    rgb(27, 60, 95)
+  );
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Container for hover effects */
+.footer-hover {
+  position: relative;
+}
+
+/* Garage logo */
+.footer-garage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Title/link over the background */
+.footer-title {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Main footer area */
+.footer {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px 0 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Footer header (logo and company name) */
+.footer-heading {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-name {
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+}
+
+/* Footer columns container */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Individual footer column */
+.footer-column {
+  flex: 0 1 auto;
+  padding: 10px;
+  min-width: 160px;
+  box-sizing: border-box;
+}
+
+/* First column (Who we are) specific styling */
+.footer-column:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Last column (ISO) specific styling */
+.footer-column:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Footer details (links and policy info) */
+.footer-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.footer-details p {
+  margin: 0;
+  padding: 8px 15px;
+}
+
+.footer-details .footer-p {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Social links styling */
+.social-links a {
+  display: inline-block;
+  padding: 2px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Footer link styles */
+.footer-link {
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer-link-iso{
+  font-size: 20px;
+}
+/* Paragraph styles within footer */
+.footer-p {
+  text-decoration: none;
+  color: black;
+  margin: 0 0 7px;
+}
+
+/* Add smooth scrolling behavior to the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Footer link styles */
+.footer-p a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-p a:hover {
+  color: #1694CE;
+}
+
+/* Add smooth scroll behavior to footer links */
+.footer-p a[href^="/"] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-p a[href^="/"]:hover {
+  color: #1694CE;
+  transform: translateX(5px);
+}
+
+/* Optional footer bottom area */
+.footer-bottom {
+  margin-top: 20px;
+  width: 250px;
+}
+
+/* Footer last section (copyright and extra info) */
+.footerlast {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  height: 10rem;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+.footerlast h1,
+.footerlast p {
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 100%;
+}
+
+/* Footer contact area */
+.footer-contact {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.footer-contactno {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.footer-p-contact {
+  margin: 0px;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* ISO certification image */
+.iso-certification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.who-we-are-image {
+  width: 150px;
+  height: auto;
+  display: block;
+  align-items: flex-start;
+}
+
+/* Digital garage logo */
+.digital_garage_logo {
+  width: 20rem;
+  height: auto;
+  margin: 20px auto 0;
+  display: block;
+  max-width: 100%;
+}
+
+/* Hover effect for garage image */
+.footer-hover:hover .footer-garage {
+  filter: brightness(1.5);
+}
+
+/* Footer column headers */
+.footer-columns h5 {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-top {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .footer-columns {
+    padding: 0 15px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-column {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  /* Override the right alignment for the last column on mobile */
+  .footer-column:last-child {
+    align-items: center;
+  }
+
+  .footer-contact {
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .footer-p-contact {
+    font-size: 0.9rem;
+  }
+
+  .who-we-are-image {
+    margin: 10px auto;
+  }
+
+  .footerlast {
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 15px 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-columns {
+    padding: 0 10px;
+  }
+
+  .footer-column {
+    padding: 8px 0;
+  }
+
+  .footer-contact {
+    padding: 0 5px;
+  }
+
+  .footer-p-contact {
+    font-size: 0.85rem;
+  }
+
+  .digital_garage_logo {
+    width: 15rem;
+    max-width: 90%;
+    margin: 10px auto 0;
+  }
+
+  .footerlast {
+    padding: 10px 0;
+    margin: 10px 0 0;
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #1694CE;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #0d7ab3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}

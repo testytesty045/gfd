@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "imgSrc": "./InsertImages/blog3.webp",
+        "title": "Recent Event@DGFutureTech Pune, India office"
+    },
+    {
+        "id": 2,
+        "imgSrc": "./InsertImages/blogpost2.webp",
+        "title": "In-House vs. MSP: Which is Best for Your Business?"
+    },
+    {
+        "id": 3,
+        "imgSrc": "./InsertImages/blogpost3.webp",
+        "title": "The future of managed services: top 5 trends to follow"
+    },
+    {
+        "id": 5,
+        "imgSrc": "./InsertImages/dgfuturetech_what do you need to know about zeroturst policy.png",
+        "title": "What do you need to know about Zero-trust policy?"
+    },
+    {
+        "id": 6,
+        "imgSrc": "./InsertImages/Is-your-IT-a-burden-or-business-booster-300x169.png",
+        "title": "Is-your-IT-a-burden-or-business-booster?"
+    },
+    {
+        "id": 7,
+        "imgSrc": "./InsertImages/Monitoring as a Service – How MSPs can Enable Dx - Digital Transformation.png",
+        "title": "Monitoring as a Service – How MSPs can Enable Dx - Digital Transformation?"
+    },
+    {
+        "id": 8,
+        "imgSrc": "./InsertImages/The Three Pillars of a Strong Managed IT Services Company.png",
+        "title": "The Three Pillars of a Strong Managed IT Services Company"
+    },
+    {
+        "id": 9,
+        "imgSrc": "./InsertImages/dgfuturetech Keeping Your Tech Running Smoothly- The Power of Proactive IT Management.png",
+        "title": "Keeping Your Tech Running Smoothly: The Power of Proactive IT Management"
+    },
+    {
+        "id": 10,
+        "imgSrc": "./InsertImages/Why Every Business Needs a Managed Service Partner.png",
+        "title": "Why Every Business Needs a Managed Service Partner?"
+    }
+]

@@ -1,0 +1,178 @@
+.media-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.mediaOne {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+.mediaOne:hover {
+    transform: translateY(-5px);
+}
+  
+.media-right-data {
+    margin-bottom: 0rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.media-right-data h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+    color: #112C56;
+    font-weight: 700;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.media-manage {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.media-text-section {
+    margin-bottom: 3rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.media-text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.media-text-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #666;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.japnese-media-point-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.japnese-media-point-list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #112C56;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.japnese-media-point-list li::before {
+    content: "•";
+    color: #1694CE;
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+}
+
+.japnese-media-point-list p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.media-content-container-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.media-banner {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .media-content-container-data {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 992px) {
+    .media-right-data h4 {
+        font-size: 2rem;
+    }
+
+    .japnese-media-point-list li {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .media-manage {
+        padding: 30px 15px;
+    }
+
+    .media-right-data h4 {
+        font-size: 1.8rem;
+    }
+
+    .japnese-media-point-list li {
+        font-size: 1.2rem;
+    }
+
+    .japnese-media-point-list p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .media-manage {
+        padding: 20px 10px;
+    }
+
+    .media-right-data h4 {
+        font-size: 1.5rem;
+    }
+
+    .japnese-media-point-list li {
+        font-size: 1.1rem;
+        padding-left: 1.2rem;
+    }
+
+    .japnese-media-point-list p {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+
+    .japnese-media-point-list li::before {
+        font-size: 1.5rem;
+    }
+}

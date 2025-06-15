@@ -1,0 +1,198 @@
+/* ManagedServices.module.css */
+
+.focusSection {
+  padding: 64px 0;
+  background-color: var(--bg-light);
+}
+
+.focusContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.focusText {
+  flex: 1;
+}
+
+.focusTitle {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.focusDescription {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.focusImage {
+  flex: 1;
+}
+
+.managedServicesSection {
+  padding: 64px 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.serviceCard {
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+}
+
+.serviceIcon {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.serviceTitle {
+  margin-bottom: 12px;
+}
+
+.serviceDescription {
+  color: var(--text-secondary);
+}
+
+.benefitsSection {
+  padding: 64px 0;
+  background-color: var(--bg-light);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.benefitIcon {
+  font-size: 24px;
+  color: var(--primary);
+  padding: 12px;
+  border-radius: 50%;
+  background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+.benefitContent h3 {
+  margin-bottom: 12px;
+}
+
+.useCasesSection {
+  padding: 64px 0;
+}
+
+.useCaseItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.challengeBox, .solutionBox {
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--box-shadow);
+}
+
+.challengeTitle, .solutionTitle {
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.solutionList {
+  list-style: none;
+  padding: 0;
+}
+
+.solutionItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.solutionIcon {
+  color: var(--success);
+  margin-right: 12px;
+}
+
+.additionalServices {
+  padding: 64px 0;
+  background-color: var(--bg-light);
+}
+
+.servicesWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.serviceItem {
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px var(--box-shadow);
+}
+
+.serviceItemTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.serviceItemIcon {
+  margin-right: 12px;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.serviceItemDescription {
+  color: var(--text-secondary);
+}
+
+.ctaSection {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.ctaTitle {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.ctaButton {
+  padding: 14px 32px;
+  font-size: 18px;
+  background-color: var(--white);
+  color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-2px);
+} 

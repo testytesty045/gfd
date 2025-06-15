@@ -1,0 +1,151 @@
+.formContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.formWrapper {
+  position: relative;
+  z-index: 10001;
+  animation: slideIn 0.5s ease-in-out;
+  width: 90%;
+  max-width: 558px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0E668F;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.closeButton:hover {
+  background-color: #0a4e6d;
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 10px;
+  }
+
+  .formWrapper {
+    width: 100%;
+    margin: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: slideUp 0.3s ease-in-out;
+  }
+  
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: #0E668F;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 480px) {
+  .formWrapper {
+    max-height: 95vh;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-height: 600px) {
+  .formWrapper {
+    margin: 10px;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+} 

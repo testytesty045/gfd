@@ -1,0 +1,50 @@
+.use-case {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+.scenario,
+.solutions {
+  margin-bottom: 1.5rem;
+}
+
+.use-case h3 {
+  color: #0D3B81;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.use-case p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.use-case ul {
+  list-style: none;
+  padding: 0;
+}
+
+.use-case li {
+  margin: 0.8rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #444;
+  line-height: 1.6;
+}
+
+.use-case li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0E668F;
+}
+
+@media (max-width: 768px) {
+  .use-case {
+    padding: 1.5rem;
+  }
+}

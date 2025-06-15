@@ -1,0 +1,268 @@
+/* Blog Section Styles */
+.blogSectionWrapper {
+  position: relative; /* Add this */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogNavButton {
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.blogNavButton:hover {
+  background: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blogNavButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #e0e0e0;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+/* UPDATED BLOG SECTION STYLES */
+.customBlogSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blogSectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.blogSectionTitle span {
+  color: var(--highlight-title);
+}
+
+.blogCardsOuterContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 10px;
+}
+
+.blogCardsContainer {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.blogCardWrapper {
+  min-width: calc(100% / 3);
+  flex: 0 0 calc(100% / 3);
+  padding: 0 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.blogCardWrapper:hover {
+  transform: translateY(-5px);
+}
+
+.blogCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardContent h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  flex-grow: 1;
+}
+
+.buttonContainer {
+  margin-top: auto;
+}
+
+.readMoreBtn {
+  background: var(--nav-button);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;  /* Make button full width on mobile */
+  font-size: 1rem;
+}
+
+.readMoreBtn:hover {
+  background: var(--highlight-title);
+}
+
+.allBlogsCta {
+  margin-top: 2rem;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--nav-button);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background: var(--highlight-title);
+}
+
+/* IMPROVED RESPONSIVE STYLES */
+@media (max-width: 992px) {
+  .blogCardWrapper {
+    min-width: 50%;
+    flex: 0 0 50%;
+  }
+  
+  .cardContent h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .customBlogSection {
+    padding: 3rem 1rem;
+  }
+  
+  .blogSectionTitle {
+    font-size: 2rem;
+  }
+  
+  .blogNavButton {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .blogSectionWrapper {
+    padding: 0 15px;
+  }
+  
+  .readMoreBtn {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 480px) {
+  .customBlogSection {
+    padding: 2rem 0.5rem;
+  }
+  
+  .blogSectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blogCardWrapper {
+    min-width: 100%;  /* Full width cards on mobile */
+    flex: 0 0 100%;
+    padding: 0 8px;
+  }
+  
+  .blogCard {
+    width: 100%;  /* Full width card */
+  }
+  
+  .cardImage {
+    height: 180px;  /* Slightly smaller images on mobile */
+  }
+  
+  .cardContent {
+    padding: 1.2rem;
+  }
+  
+  .cardContent h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .readMoreBtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;  /* Full width button */
+  }
+  
+  .viewAllBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .blogNavButton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .prevButton {
+    left: 5px;
+  }
+  
+  .nextButton {
+    right: 5px;
+  }
+} 

@@ -1,0 +1,22 @@
+.cta-button {
+  background: #0E668F;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0B2142;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

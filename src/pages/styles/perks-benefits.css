@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.perks-container {
+  font-family: "Inter", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #000;
+}
+
+.perks-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.perks-content {
+  display: flex;
+  gap: 40px;
+}
+
+.perks-note {
+  position: relative;
+  width: 360px;
+  height: 180px;
+  transform: rotate(-5deg);
+  border: none;
+  padding: 20px;
+  font-family: "Permanent Marker", cursive, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  background-color: white;
+  box-shadow: 
+    2px 0px 0px 0px #000, 
+    -2px 0px 0px 0px #000, 
+    0px 2px 0px 0px #000, 
+    0px -2px 0px 0px #000,
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.perks-note::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: white;
+  border-top: 2px solid #000;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  transform: translateY(-100%);
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+  flex: 1;
+}
+
+.perks-category {
+  margin-bottom: 30px;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 
+    2px 0px 0px 0px #000, 
+    -2px 0px 0px 0px #000, 
+    0px 2px 0px 0px #000, 
+    0px -2px 0px 0px #000,
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.category-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  stroke-width: 1.5;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .perks-content {
+    flex-direction: column;
+  }
+
+  .perks-note {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 40px;
+  }
+
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .perks-title {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.25rem;
+  }
+}
+

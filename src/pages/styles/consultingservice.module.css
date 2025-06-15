@@ -1,0 +1,111 @@
+.infra-manage{
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px;
+    min-height: 100vh;
+    margin-top: 0;
+}
+
+.infra-content {
+    margin-left: 3%;
+}
+
+.infra-right-data {
+    flex: 1;
+    padding: 0px;
+    line-height: 1.9;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.infra-content-container-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.infra-manage h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0D3B81;
+}
+
+.infra-manage h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1A56B0;
+}
+
+.infra-manage p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4B5563;
+    margin-bottom: 1rem;
+}
+
+.infraOne{
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .infra-manage {
+        padding: 1rem;
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .infra-manage p {
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    
+    .infra-content {
+        margin-left: 0; 
+        width: 100%;
+    }
+
+    .infra-right-data {
+        flex: none; 
+        width: 100%; 
+        margin-right: 0; 
+        margin-top: 1rem;
+    }
+    
+    .infra-content-container-data {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+    .infra-manage h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        text-align: left;
+    }
+
+    .infra-manage h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        text-align: left;
+    }
+    
+    .infra-manage ul {
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .infra-manage li {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .infraOne {
+        width: 100%;
+        max-width: 350px;
+        margin: 1.5rem auto;
+    }
+}

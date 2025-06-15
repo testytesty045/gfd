@@ -1,0 +1,59 @@
+.useCasesSection {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.containerCustom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.useCasesHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.useCasesLabel {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.useCasesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.useCasesDescription {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.useCasesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .useCasesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .useCasesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

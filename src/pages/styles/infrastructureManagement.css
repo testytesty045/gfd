@@ -1,0 +1,119 @@
+.infra-manage {
+    width: 100%;
+    max-width: 1266px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    min-height: 100vh;
+    margin-top: 0;
+    background-color: #f8fbff;
+    border-radius: 12px;
+  }
+  
+  .infra-top-text {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .infra-heading {
+    font-size: 1.75rem;
+    color: #0D3B81;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .infra-sub {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .infra-content-container-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .infra-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .infraOne {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .infra-right-data {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .infra-right-data h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1A56B0;
+  }
+  
+  .infra-right-data ul {
+    padding-left: 1.2rem;
+  }
+  
+  .infra-right-data li {
+    font-size: 1rem;
+    color: #4B5563;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 1.2rem;
+  }
+  
+  .infra-right-data li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #1A56B0;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .infra-manage {
+      padding: 1.5rem;
+    }
+  
+    .infra-content-container-data {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .infra-content,
+    .infra-right-data {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .infra-top-text {
+      text-align: left;
+    }
+  
+    .infra-heading {
+      font-size: 1.5rem;
+    }
+  
+    .infra-sub {
+      font-size: 1rem;
+    }
+  
+    .infra-right-data h2 {
+      font-size: 1.4rem;
+    }
+  }
+  

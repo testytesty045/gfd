@@ -1,0 +1,733 @@
+.useCasesSection {
+  padding: 0 0 5rem 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f8faff, #f0f4ff);
+}
+
+.useCasesSection::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(#404ad8 8%, transparent 8%);
+  background-position: 0 0;
+  background-size: 30px 30px;
+  opacity: 0.03;
+  z-index: 1;
+}
+
+.useCasesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns for 3 cards */
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1400px; /* Width for 3 cards */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  justify-content: center;
+}
+
+/* Two card layout */
+.twoCards {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1100px;
+  gap: 1.5rem;
+}
+
+/* Use case card styling */
+.useCaseCard {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease forwards;
+  border: 1px solid #eaeaea;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.useCaseCard:nth-of-type(1) { animation-delay: 0.1s; }
+.useCaseCard:nth-of-type(2) { animation-delay: 0.3s; }
+.useCaseCard:nth-of-type(3) { animation-delay: 0.5s; }
+
+.useCaseCard:hover {
+  transform: translateY(-5px); /* Reduced hover lift */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.useCaseCard::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px; /* Thicker accent line */
+  /* background: linear-gradient(to right, #404ad8, #1652f0); */
+  top: 0;
+  left: 0;
+}
+
+/* Section title styling */
+.sectionTitle {
+  font-size: 32px; /* Slightly smaller title */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem; /* Reduced bottom margin */
+  color: #333;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  word-wrap: break-word;
+  hyphens: auto;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #404ad8, #1652f0);
+  border-radius: 2px;
+}
+
+/* Card structure styling */
+.cardHeader {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.section {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.section:last-child {
+  border-bottom: none;
+  flex: 1; /* Make the last section expand to fill available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.section:last-child p {
+  flex: 1; /* Make the paragraph in the last section expand */
+}
+
+/* Make section hover effects subtle */
+.section:hover {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Challenge section styling */
+.challengeTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e74c3c;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.5rem;
+  /* background-color: #fff5f5; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.challengeTitle::before {
+  content: '!';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+
+.challenge {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 1.5rem 1.2rem;
+  margin: 0;
+  /* background-color: #fff5f5; */
+}
+
+/* Solution section styling */
+.solutionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #27ae60;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.5rem;
+  /* background-color: #f0fff4; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.solutionTitle::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+
+.solution {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 1.5rem 1.2rem;
+  margin: 0;
+  /* background-color: #f0fff4; */
+}
+
+/* Benefits section styling */
+.benefitsTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3498db;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.8rem;
+  /* background-color: #ebf7ff; */
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+.benefitsTitle::before {
+  content: '★';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  /* background-color: #3498db; */
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .benefitsTitle::before {
+  transform: rotate(360deg);
+}
+
+/* Scope styling */
+.scopeTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2980b9;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.8rem;
+  /* background-color: #e8f4fd; */
+  border-bottom: 1px solid rgba(41, 128, 185, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+
+.scopeTitle::before {
+  content: '🔍';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  /* background-color: #2980b9; */
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .scopeTitle::before {
+  transform: scale(1.1);
+}
+
+/* Assessment styling */
+.assessmentTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8e44ad;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.8rem;
+  /* background-color: #f5eeff; */
+  border-bottom: 1px solid rgba(142, 68, 173, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.assessmentTitle::before {
+  content: '📊';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  /* background-color: #8e44ad; */
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+
+
+.useCaseCard:hover .assessmentTitle::before {
+  transform: none;
+}
+
+/* Penetration styling */
+.penetrationTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c0392b;
+  margin: 0;
+  padding: 1.8rem 2rem 1.2rem;
+  /* background-color: #ffeaea; */
+  border-bottom: 1px solid rgba(192, 57, 43, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+
+.penetrationTitle::before {
+  content: '🛡️';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  /* background-color: #c0392b; */
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .penetrationTitle::before {
+  transform: rotate(45deg);
+}
+
+/* Results Delivered styling */
+.resultsDeliveredTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  padding: 1.8rem 2rem 1.2rem;
+  /* background-color: #f2f4f6; */
+  border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.resultsDeliveredTitle::before {
+  content: '📋';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #2c3e50;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .resultsDeliveredTitle::before {
+  transform: scale(1.1) translateX(3px);
+}
+
+/* Issues Found styling */
+.issuesFoundTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f39c12;
+  margin: 0;
+  padding: 1.8rem 2rem 1.2rem;
+  /* background-color: #fff8e6; */
+  border-bottom: 1px solid rgba(243, 156, 18, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+
+.issuesFoundTitle::before {
+  content: '⚠';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  /* background-color: #f39c12; */
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .issuesFoundTitle::before {
+  transform: translateY(-3px);
+}
+
+/* Fixes Implemented styling */
+.fixesImplementedTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #9b59b6;
+  margin: 0;
+  padding: 1.8rem 2rem 1.2rem;
+  /* background-color: #f8f0fc; */
+  border-bottom: 1px solid rgba(155, 89, 182, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+.fixesImplementedTitle::before {
+  content: '🔧';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .fixesImplementedTitle::before {
+  transform: rotate(-45deg);
+}
+
+/* Outcome styling */
+.outcomeTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #16a085;
+  margin: 0;
+  padding: 1.8rem 2rem 1.2rem;
+  /* background-color: #e6fff7; */
+  border-bottom: 1px solid rgba(22, 160, 133, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+
+
+.outcomeTitle::before {
+  content: '🏆';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  /* background-color: #16a085; */
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.useCaseCard:hover .outcomeTitle::before {
+  transform: scale(1.2);
+}
+
+/* Content styling */
+.challenge, .solution, .benefits, .scope, .assessment, .penetration, .resultsDelivered, .issuesFound, .fixesImplemented, .outcome {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 1.5rem 1.2rem;
+  margin: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove extra space between sections */
+.useCaseCard > * {
+  margin-bottom: 0 !important;
+}
+
+.useCaseCard h3 {
+  margin-top: 0 !important;
+}
+
+/* Add a small separation between challenge and solution */
+.solutionTitle {
+  margin-top: 0 !important;
+  border-top: 1px solid rgba(39, 174, 96, 0.1);
+}
+
+/* Responsive media queries */
+@media (max-width: 1199px) {
+  .useCasesGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .useCasesGrid {
+    grid-template-columns: minmax(300px, 1fr); /* Single column on small screens */
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  .challengeTitle,
+  .solutionTitle,
+  .benefitsTitle,
+  .scopeTitle,
+  .assessmentTitle,
+  .penetrationTitle,
+  .resultsDeliveredTitle,
+  .issuesFoundTitle,
+  .fixesImplementedTitle,
+  .outcomeTitle {
+    font-size: 20px;
+    padding: 1.2rem 1.5rem 1rem;
+  }
+  
+  .challenge, 
+  .solution,
+  .benefits,
+  .scope,
+  .assessment,
+  .penetration,
+  .resultsDelivered,
+  .issuesFound,
+  .fixesImplemented,
+  .outcome {
+    font-size: 15px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionTitle {
+    font-size: 26px;
+  }
+  
+  .challengeTitle::before,
+  .solutionTitle::before,
+  .benefitsTitle::before,
+  .scopeTitle::before,
+  .assessmentTitle::before,
+  .penetrationTitle::before,
+  .resultsDeliveredTitle::before,
+  .issuesFoundTitle::before,
+  .fixesImplementedTitle::before,
+  .outcomeTitle::before {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 24px;
+    padding: 0 0.5rem;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+  
+  .sectionTitle span {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .useCasesGrid {
+    padding: 0 0.8rem;
+  }
+  
+  .challengeTitle,
+  .solutionTitle,
+  .benefitsTitle,
+  .scopeTitle,
+  .assessmentTitle,
+  .penetrationTitle,
+  .resultsDeliveredTitle,
+  .issuesFoundTitle,
+  .fixesImplementedTitle,
+  .outcomeTitle {
+    font-size: 18px;
+    padding: 1rem 1.2rem 0.8rem;
+  }
+}
+
+/* Update common styles for all section titles */
+.benefitsTitle,
+.scopeTitle,
+.assessmentTitle,
+.penetrationTitle,
+.resultsDeliveredTitle,
+.issuesFoundTitle,
+.fixesImplementedTitle,
+.outcomeTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 1.2rem 1.5rem 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: none;
+}
+
+.benefitsTitle::before,
+.scopeTitle::before,
+.assessmentTitle::before,
+.penetrationTitle::before,
+.resultsDeliveredTitle::before,
+.issuesFoundTitle::before,
+.fixesImplementedTitle::before,
+.outcomeTitle::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-right: 0.5rem;
+}
+
+/* For all content sections */
+.benefits,
+.scope,
+.assessment,
+.penetration,
+.resultsDelivered,
+.issuesFound,
+.fixesImplemented,
+.outcome {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  padding: 0 1.5rem 1.2rem;
+  margin: 0;
+}
+
+/* Individual section background colors */
+/* .scope, .scopeTitle { background-color: #e8f4fd; } */
+/* .assessment, .assessmentTitle { background-color: #f5eeff; } */
+/* .penetration, .penetrationTitle { background-color: #ffeaea; } */
+/* .benefits, .benefitsTitle { background-color: #ebf7ff; } */
+.resultsDelivered, .resultsDeliveredTitle { background-color: #f2f4f6; }
+/* .issuesFound, .issuesFoundTitle { background-color: #fff8e6; } */
+/* .fixesImplemented, .fixesImplementedTitle { background-color: #f8f0fc; } */
+/* .outcome, .outcomeTitle { background-color: #e6fff7; } */
+
+/* Section title colors */
+.benefitsTitle { color: #3498db; }
+.scopeTitle { color: #2980b9; }
+/* .assessmentTitle { color: #8e44ad; } */
+/* .penetrationTitle { color: #c0392b; } */
+.resultsDeliveredTitle { color: #2c3e50; }
+.issuesFoundTitle { color: #f39c12; }
+.fixesImplementedTitle { color: #9b59b6; }
+.outcomeTitle { color: #16a085; }
+
+/* Icons for each section */
+.benefitsTitle::before { background-color: #3498db; content: '★'; }
+.scopeTitle::before { background-color: #2980b9; content: '🔍'; }
+.assessmentTitle::before { background-color: #8e44ad; content: '📊'; }
+.penetrationTitle::before { background-color: #c0392b; content: '🛡️'; }
+.resultsDeliveredTitle::before { background-color: #2c3e50; content: '📋'; }
+.issuesFoundTitle::before { background-color: #f39c12; content: '⚠'; }
+.fixesImplementedTitle::before { background-color: #9b59b6; content: '🔧'; }
+.outcomeTitle::before { background-color: #16a085; content: '🏆'; }
+
+/* Remove the previous two card selector since we're using a class now */
+.useCaseCard:first-child:nth-last-child(2),
+.useCaseCard:first-child:nth-last-child(2) ~ .useCaseCard {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+} 

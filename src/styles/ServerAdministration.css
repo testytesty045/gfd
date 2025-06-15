@@ -1,0 +1,44 @@
+.comit-server-section {
+  background-color: white;
+}
+
+.comit-container-inner {
+}
+
+.comit-section-title {
+  margin-bottom: 16px;
+  padding-top: 30px;
+  border-left: none;
+}
+
+.comit-benefits-list {
+  gap: 20px;
+  display: grid;
+}
+
+.comit-benefit-item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.comit-benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comit-check-icon {
+  background-color: #4ade80;
+}
+
+.comit-benefit-title {
+  font-size: 1.1rem;
+  color: #0D3B81;
+}
+
+.comit-benefit-text {
+  font-size: 0.95rem;
+} 

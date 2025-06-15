@@ -1,0 +1,435 @@
+.navbar {
+  position: fixed;
+  top: 15px; /* Pushes it down from the top of the viewport */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 10px;
+}
+  
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 1.5rem;
+    }
+}
+
+.navbarContainer {
+    background-color: #F0F0F0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+    height: 70px;
+    position: relative;
+}
+
+.navbarLogo {
+    flex-shrink: 0;  
+}
+
+.emptySpace {
+    flex-grow: 1;
+}
+
+.navLinksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 11.5rem;
+    height: 2.8rem;
+    object-fit: contain; 
+    max-width: 100%; 
+}
+
+.navbarMenu {
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    gap: 0.4rem;
+    margin-right: 0.3rem;
+}
+
+.mainContent {
+    margin: 0;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .main_outlet {
+    margin: 0; 
+    padding: 0;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .ImageSection {
+    margin: 5rem 0;
+    width: 100%;
+ }
+  
+.link {
+    color: var(--nav-letter);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    padding: 0.5rem 0.2rem;
+    border-radius: 6px;
+  transition: background-color 0.3s, outline 0.3s;
+}
+.link:hover {
+    color: var(--nav-active);
+}
+
+.active {
+    font-weight: bold;
+    color: var(--nav-active);
+}
+.consultationButton {
+    background-color: var(--nav-active);
+    color: var(--text-color);
+    padding: 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    margin-right: 0.3rem;
+}
+.consultationButton:hover {
+    background-color: var(--nav-active);
+    opacity: 0.9;
+    color: var(--text-color);
+}
+
+/* Mobile menu button */
+.mobileMenuButton {
+    display: none;
+}
+
+/* These classes are no longer needed */
+.externalButton, .menuButton {
+    display: none;
+}
+
+.consultationButtonFixed {
+    display: none;
+}
+
+.consultationButtonMobile {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--nav-letter);
+}
+.hamburger svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media screen and (min-width: 1261px) and (max-width: 1700px) {
+    .main_outlet {
+      margin: 0; 
+    }
+    .navbarContainer {
+      width: 95%;
+      margin: 0 auto; 
+    }
+}
+@media screen and (min-width: 1740px) and (max-width: 2582px) {
+    .navbarContainer {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .logo {
+        margin-right: 1rem;
+      }
+      .main_outlet{
+        margin: 0;
+      }
+  }
+  @media screen and (min-width: 2600px) and (max-width: 3100px) {
+    .navbarContainer{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .main_outlet{
+        margin: 0;
+      }
+  }
+  @media screen and (min-width: 3101px) and (max-width: 3892px) {
+    .navbarContainer{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .main_outlet{
+        margin: 0;
+      }
+  }
+@media (max-width: 1260px) {
+    .main_outlet {
+        margin: 0; 
+    }
+    .navbarContainer {
+        width: 95%;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navLinksContainer {
+        order: 3;
+    }
+    .navbarMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--text-color);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        box-shadow: 0 2px 4px var(--box-shadow);
+        margin-right: 0;
+    }
+    .navbarMenuOpen {
+        display: flex;
+    }
+    
+    .consultationButton {
+        display: none; /* Hide in top bar for mobile */
+    }
+    
+    .mobileConsultationButton {
+        display: block;
+        font-size: 0.85rem;
+    }
+}
+
+/* Fix for resolution between 1260px and 1275px */
+@media (min-width: 1260px) and (max-width: 1275px) {
+    /* Adjust container to make more room */
+    .navbarContainer {
+        padding: 0.75rem 0.75rem;
+    }
+    
+    /* Reduce logo size */
+    .logo {
+        width: 9.5rem;
+    }
+    
+    /* Style the consultation button */
+    .consultationButton {
+        font-size: 0.75rem;
+        padding: 0.35rem;
+        margin-right: 0.3rem;
+    }
+    
+    .navbarMenu {
+        gap: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    
+    .link, .dropdownButton {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        padding: 0.75rem 1rem;
+        width: 95%;
+    }
+    
+    .consultationButton {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+    
+    .mainMenuSection {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .consultationButton {
+        font-size: 0.75rem;
+        padding: 0.3rem;
+    }
+    
+    .navbarLogo img {
+        max-width: 100px;
+    }
+}
+
+@media screen and (min-width: 1260px) and (max-width: 1446px) {
+    .navbarMenu {
+        gap: 0.5rem;  /* Reduce gap between menu items */
+        flex-grow: 1;
+    }
+
+    .link {
+        font-size: 0.9rem;  /* Slightly reduce font size */
+        padding: 0.5rem 0.1rem;  /* Reduce padding */
+    }
+
+    .consultationButton {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .fixedNavButton {
+        display: inline-block;
+    }
+
+    .logo {
+        width: 10rem;  /* Slightly reduce logo size */
+        margin-right: 1rem;
+    }
+
+    .navbarContainer {
+        padding: 0.75rem 0.5rem;  /* Reduce container padding */
+    }
+
+    .dropdownButton {
+        font-size: 0.9rem;
+    }
+}
+
+.vertical_line {
+    height: 1.5rem;
+    width: 1px;
+    background-color: var(--nav-letter);
+    opacity: 0.2;
+}
+
+/* Dropdown menu styles */
+.menuItemContainer {
+    margin: 0 0.2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownButton {
+    background: none;
+    border: none;
+    color: var(--nav-letter);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s ease;
+}
+
+.dropdownButton:hover {
+    color: var(--nav-active);
+}
+
+.dropdownArrow {
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--text-color);
+    border-radius: 4px;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdownItem {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--nav-letter);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--nav-active);
+}
+
+@media (max-width: 1260px) {
+    .menuItemContainer {
+        width: 100%;
+    }
+    
+    .dropdownButton {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdownMenu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0;
+        background: transparent;
+    }
+    
+    .dropdownItem {
+        padding-left: 1.5rem;
+    }
+}
+
+/* For larger screens */
+@media (min-width: 1276px) {
+    .navbarMenu {
+        flex-grow: 1;
+    }
+    
+    .fixedNavButton {
+        display: inline-block;
+    }
+}
+
+/* Mobile menu consultation button */
+.mobileConsultationButton {
+    display: none;
+    background-color: var(--nav-active);
+    color: var(--text-color);
+    padding: 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.mobileConsultationButton:hover {
+    background-color: var(--nav-active);
+    opacity: 0.9;
+    color: var(--text-color);
+}
+
+/* Remove any remaining reference to rightSection */
+.rightSection {
+    display: none;
+}

@@ -1,0 +1,421 @@
+/* NetworkMonitoring.module.css */
+
+.heroSection {
+  background-image: url('https://images.unsplash.com/photo-1563770660941-10a0f11db587');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 5rem 0;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 38, 71, 0.7);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+.painPointsSection {
+  background-color: white;
+}
+
+.painPointsTitle {
+  font-size: var(--font-size-xl);
+  color: var(--highlight-title);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-weight: 700;
+}
+
+.painPointsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.painPointItem {
+  background-color: #f9f9f9;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.painPointIcon {
+  font-size: 32px;
+  color: #e74c3c;
+  flex-shrink: 0;
+}
+
+.painPointContent h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--highlight-title);
+  margin-bottom: var(--spacing-sm);
+}
+
+.painPointContent p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dgft-text);
+}
+
+.preventSection {
+  padding: var(--spacing-xxl) 0;
+}
+
+.preventContainer {
+  background-color: var(--dgft-primary);
+  opacity: 0.9;
+  color: white;
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+.preventTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.preventDescription {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.preventList {
+  list-style: none;
+  padding: 0;
+}
+
+.preventItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.preventCheckmark {
+  color: white;
+  margin-right: var(--spacing-md);
+  font-size: 20px;
+}
+
+.solutionsSection {
+  padding: var(--spacing-xxl) 0;
+  background-color: white;
+}
+
+.solutionsTitle {
+  font-size: var(--font-size-xl);
+  color: var(--highlight-title);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-weight: 700;
+}
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.solutionCard {
+  background-color: white;
+  box-shadow: 0 4px 10px var(--box-shadow);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  transition: border-bottom 0.3s ease;
+  position: relative;
+}
+
+.solutionCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--dgft-secondary);
+  transition: width 0.3s ease;
+}
+
+.solutionCard:hover::after {
+  width: 100%;
+}
+
+.solutionIcon {
+  font-size: 48px;
+  color: var(--dgft-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.solutionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--highlight-title);
+  margin-bottom: var(--spacing-sm);
+}
+
+.solutionDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dgft-text);
+}
+
+.ctaSection {
+  padding: var(--spacing-xxl) 0;
+  background-color: #0a2647;
+  color: white;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+}
+
+.ctaButton {
+  background-color: white;
+  color: var(--dgft-primary);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--dgft-secondary);
+  color: white;
+}
+p, .solution-text {
+    white-space: pre-line;
+  }
+  
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+  
+  .heroSubtitle {
+    font-size: 18px;
+  }
+  
+  .painPointsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .preventContainer {
+    padding: var(--spacing-lg);
+  }
+  
+  .heroSection {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+  
+  .painPointItem, .solutionCard {
+    padding: var(--spacing-md);
+  }
+}
+
+
+
+.whatIsSection {
+  padding: var(--spacing-xxl) 0;
+  background-color: white;
+  position: relative;
+}
+
+.whatIsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(#f9f9f9 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.whatIsContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.whatIsTitle {
+  font-size: var(--font-size-xxl);
+  color: var(--highlight-title);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+  text-align: center;
+}
+
+.whatIsDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--dgft-text);
+  width: 100%;
+  text-align: justify;
+  margin-bottom: var(--spacing-md);
+}
+
+
+/* Case Studies Section */
+.caseStudiesSection {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-background-alt);
+}
+
+.caseStudiesTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  color: var(--highlight-title);
+}
+
+.sectionTitle{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: #0a2647;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle ::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 3px;
+  background-color: var(--dgft-primary);
+}
+
+.whatIsTitle {
+  font-size: 1.8rem;
+  color: var(--highlight-title);
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.useCaseItem {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 4px 10px var(--box-shadow);
+}
+
+.challengeSection {
+  margin-bottom: var(--spacing-lg);
+}
+
+.challengeTitle {
+  color: var(--dgft-primary);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.challengeSection p {
+  color: var(--dgft-text);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.solutionSection {
+  margin-top: var(--spacing-lg);
+}
+
+.solutionTitle {
+  color: var(--dgft-primary);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.solutionList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.solutionList li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--dgft-text);
+  line-height: 1.6;
+}
+
+.solutionList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--dgft-primary);
+  font-weight: bold;
+}
