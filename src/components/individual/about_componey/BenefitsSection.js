@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import BenefitCard from "./BenefitCard";
 import styles from "../../../components/styles/benifits.module.css";
 
-import LowerITCostsIcon from "../../../assets/images/Lower IT Costs.png";
-import OperationalEfficiencyIcon from "../../../assets/images/Operational Efficiency.png";
-import ResourceAllocationIcon from "../../../assets/images/Better Resource Allocation.png";
-import UpToDateTechnologyIcon from "../../../assets/images/Up to date technology photo_enhanced_enhanced.png";
-import NightShiftsIcon from "../../../assets/images/Allowance for night shifts.png";
+import LowerITCostsIcon from "../../../assets/images/Lower IT Costs.webp";
+import OperationalEfficiencyIcon from "../../../assets/images/Operational Efficiency.webp";
+import ResourceAllocationIcon from "../../../assets/images/Better Resource Allocation.webp";
+import UpToDateTechnologyIcon from "../../../assets/images/Up to date technology photo_enhanced_enhanced.webp";
+import NightShiftsIcon from "../../../assets/images/Allowance for night shifts.webp";
 
 const BenefitsSection = () => {
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   useEffect(() => {
+    // Preload images for better performance
     const imagesList = [
       LowerITCostsIcon,
       OperationalEfficiencyIcon,
@@ -20,32 +20,10 @@ const BenefitsSection = () => {
       NightShiftsIcon
     ];
     
-    const loadedImages = Array(imagesList.length).fill(false);
-    let loaded = 0;
-    
-    imagesList.forEach((src, index) => {
+    imagesList.forEach((src) => {
       const img = new Image();
       img.src = src;
-      img.onload = () => {
-        loadedImages[index] = true;
-        loaded++;
-        if (loaded === imagesList.length) {
-          setImagesLoaded(true);
-        }
-      };
-      img.onerror = () => {
-        loaded++;
-        if (loaded === imagesList.length) {
-          setImagesLoaded(true);
-        }
-      };
     });
-    
-    const timer = setTimeout(() => {
-      setImagesLoaded(true);
-    }, 3000);
-    
-    return () => clearTimeout(timer);
   }, []);
   
   const benefitsData = [

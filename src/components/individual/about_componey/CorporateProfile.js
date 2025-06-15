@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import corporateProfileImg from "../../../assets/images/corporat_profile.png";
+import corporateProfileImg from "../../../assets/images/corporat_profile.webp";
 
 const CorporateProfile = () => {
   return (

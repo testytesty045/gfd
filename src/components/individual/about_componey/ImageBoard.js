@@ -1,9 +1,9 @@
 import styles from "../../styles/imageboard.module.css"
-import leadership1 from "../../../assets/images/Anant Sir.jpg";
-import leadership2 from "../../../assets/images/Gautam Sir.jpg";
-import leadership3 from "../../../assets/images/leadership3.jpg";
+import leadership1 from "../../../assets/images/Anant Sir.webp";
+import leadership2 from "../../../assets/images/Gautam Sir.webp";
+import leadership3 from "../../../assets/images/leadership3.webp";
 import leadership4 from "../../../assets/images/leadership4.webp";
-import leadership5 from "../../../assets/images/leadership5.jpeg";
+import leadership5 from "../../../assets/images/leadership5.webp";
 import { useEffect } from "react";
 
 const ImageBoard = () => {

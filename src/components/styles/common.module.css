@@ -12,7 +12,7 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
-    background: url('../../assets/images/background.png');
+    background: url('../../assets/images/background.webp');
     background-size: cover;
     background-position: center;
     border-radius: 24px;
@@ -691,27 +691,27 @@
 }
 
 .card1 {
-    background-image: url('../../assets/images/1.png');
+    background-image: url('../../assets/images/1.webp');
 }
 
 .card2 {
-    background-image: url('../../assets/images/2.jpg');
+    background-image: url('../../assets/images/2.webp');
 }
 
 .card3 {
-    background-image: url('../../assets/images/3.png');
+    background-image: url('../../assets/images/3.webp');
 }
 
 .card4 {
-    background-image: url('../../assets/images/4.jpg');
+    background-image: url('../../assets/images/4.webp');
 }
 
 .card5 {
-    background-image: url('../../assets/images/5.jpg');
+    background-image: url('../../assets/images/5.webp');
 }
 
 .card6 {
-    background-image: url('../../assets/images/6.jpg');
+    background-image: url('../../assets/images/6.webp');
 }
 
 .learnMore1 {
@@ -1010,27 +1010,27 @@
 }
 
 .clientCard.card1 {
-  background-image: url('../../assets/images/1.png');
+  background-image: url('../../assets/images/1.webp');
 }
 
 .clientCard.card2 {
-  background-image: url('../../assets/images/2.jpg');
+  background-image: url('../../assets/images/2.webp');
 }
 
 .clientCard.card3 {
-  background-image: url('../../assets/images/3.png');
+  background-image: url('../../assets/images/3.webp');
 }
 
 .clientCard.card4 {
-  background-image: url('../../assets/images/4.jpg');
+  background-image: url('../../assets/images/4.webp');
 }
 
 .clientCard.card5 {
-  background-image: url('../../assets/images/5.jpg');
+  background-image: url('../../assets/images/5.webp');
 }
 
 .clientCard.card6 {
-  background-image: url('../../assets/images/6.jpg');
+  background-image: url('../../assets/images/6.webp');
 }
 
 .clientCard .clientContent h3,
@@ -1269,7 +1269,7 @@
 }
 
 .itCard1 {
-  background-image: url('../../assets/images/1.png');
+  background-image: url('../../assets/images/1.webp');
 }
 
 .itCard2 {
@@ -1277,7 +1277,7 @@
 }
 
 .itCard3 {
-  background-image: url('../../assets/images/3.png');
+  background-image: url('../../assets/images/3.webp');
 }
 
 .itCard4 {
@@ -1517,4 +1517,45 @@
     width: 100%;
     overflow: visible;
   }
+}
+
+/* Cookie banner styles to prevent layout shift */
+.cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px; /* Reserve space for the banner */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-sizing: border-box;
+}
+
+.cookieBanner p {
+    margin: 0;
+    padding-right: 20px;
+}
+
+.cookieBanner button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cookieBanner button.accept {
+    background-color: #1FCBED;
+    color: white;
+}
+
+.cookieBanner button.decline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
 }

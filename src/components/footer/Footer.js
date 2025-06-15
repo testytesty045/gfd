@@ -13,7 +13,7 @@ import { footerText } from "../../data/services";
 
 import logofooter from "../../assets/images/logo.png";
 import garagelogo from "../../assets/images/garage.webp";
-import isocertificate from "../../assets/images/iso_certification.png";
+import isocertificate from "../../assets/images/iso_certification.webp";
 import footerbootm from "../../assets/images/logo_dgg (1).svg";
 
 // Animation variants for Framer Motion
@@ -97,11 +97,6 @@ const Footer = () => {
       });
     }, 50);
   };
-
-  // Example ID values
-  const someIdValue = "123";
-  const someIdValue1 = "1234";
-  const someIdValue2 = "12345";
 
   return (
     <div className="footer-top">

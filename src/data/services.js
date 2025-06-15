@@ -725,35 +725,35 @@ export const itServicesData = [
     title: "Comprehensive IT Services",
     content:
       "We deliver end-to-end IT solutions including development, operations, and monitoring services tailored to your industry needs.",
-    img: "/assets/images/betteritservice/Comprehensive IT Services 1.jpg",
+    img: "/assets/images/betteritservice/Comprehensive IT Services 1.webp",
   },
   {
     id: 2,
     title: "Strong Security Compliance",
     content:
       "Our team ensures robust security compliance with global standards like ISO-27001:2022 and PCI-DSS, protecting your business assets.",
-    img: "/assets/images/betteritservice/Strong Security Compliance.jpg",
+    img: "/assets/images/betteritservice/Strong Security Compliance.webp",
   },
   {
     id: 3,
     title: "Demand for Skilled IT Talent",
     content:
       "We help bridge the IT talent gap by providing access to highly skilled professionals for your digital transformation needs.",
-    img: "/assets/images/betteritservice/Demand for Skilled IT Talent.png",
+    img: "/assets/images/betteritservice/Demand for Skilled IT Talent.webp",
   },
   {
     id: 4,
     title: "Leveraging Engineering Talent",
     content:
       "Our team of expert engineers in India combines technical excellence with bilingual capabilities to deliver superior solutions.",
-    img: "/assets/images/betteritservice/Leveraging Engineering Talent.jpg",
+    img: "/assets/images/betteritservice/Leveraging Engineering Talent.webp",
   },
   {
     id: 5,
     title: "Global & Multilingual Advantage",
     content:
       "Our diverse team brings global expertise and multilingual capabilities to provide comprehensive IT solutions worldwide.",
-    img: "/assets/images/betteritservice/Global & Multilingual Advantage 1.jpg",
+    img: "/assets/images/betteritservice/Global & Multilingual Advantage 1.webp",
   },
 ];
 
@@ -887,35 +887,35 @@ export const fetchLocations = () => {
 export const fetchGalleryImages = () => {
   return [
     {
-      src: require("../assets/Moments/life@dg-img1.png"),
+      src: require("../assets/Moments/life@dg-img1.webp"),
       alt: "Annual company retreat",
     },
     {
-      src: require("../assets/Moments/life@dg-img2.jpeg"),
+      src: require("../assets/Moments/life@dg-img2.webp"),
       alt: "Annual company retreat",
     },
     {
-      src: require("../assets/Moments/life@dg-img3.jpg"),
+      src: require("../assets/Moments/life@dg-img3.webp"),
       alt: "Office celebration",
     },
     {
-      src: require("../assets/Moments/Lif@dgft.jpg"),
+      src: require("../assets/Moments/Lif@dgft.webp"),
       alt: "Team building activity",
     },
     {
-      src: require("../assets/Moments/life@dg-img4.jpg"),
+      src: require("../assets/Moments/life@dg-img4.webp"),
       alt: "Product launch event",
     },
     {
-      src: require("../assets/Moments/life@dg-img5.jpg"),
+      src: require("../assets/Moments/life@dg-img5.webp"),
       alt: "Community volunteering",
     },
     {
-      src: require("../assets/Moments/life@dg-img6.jpg"),
+      src: require("../assets/Moments/life@dg-img6.webp"),
       alt: "Community volunteering",
     },
     {
-      src: require("../assets/Moments/life@dg-img7.jpg"),
+      src: require("../assets/Moments/life@dg-img7.webp"),
       alt: "Community volunteering",
     },
   ];

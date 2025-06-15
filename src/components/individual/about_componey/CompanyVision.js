@@ -1,7 +1,7 @@
 import React from "react";
 import BenefitsCard from "./BenefitsCard";
 import styles from "../../styles/companyvision.module.css";
-import righImage from "../../../assets/images/about_blue_section.png";
+import righImage from "../../../assets/images/about_blue_section.webp";
 
 const CompanyVision = () => {
   return (

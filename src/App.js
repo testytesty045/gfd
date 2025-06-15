@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import MainHeader from "./components/nav/MainHeader";
@@ -29,7 +30,72 @@ import ServicePlans from "./pages/services/ServicePlans.js";
 import SuccessStory4 from "./pages/success-story-4.js";
 import SuccessStory5 from "./pages/success-story-5.js";
 import CookieConsent from "./components/CookieConsent.js";
+
+// Font preloading function
+const preloadFonts = () => {
+  // List of fonts to preload
+  const fontUrls = [
+    'https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2',
+    'https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2'
+  ];
+
+  // Create preload links
+  fontUrls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = url;
+    link.as = 'font';
+    link.type = 'font/woff2';
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
+
 function App() {
+  const [cssLoaded, setCssLoaded] = useState(false);
+
+  useEffect(() => {
+    // Preload fonts
+    preloadFonts();
+    
+    // Check if main CSS is loaded
+    const links = document.querySelectorAll('link[rel="stylesheet"]');
+    let allLoaded = true;
+    
+    links.forEach(link => {
+      if (!link.sheet) {
+        allLoaded = false;
+      }
+    });
+    
+    if (allLoaded) {
+      setCssLoaded(true);
+    } else {
+      // If not loaded, set a timeout to continue anyway after 1 second
+      const timer = setTimeout(() => setCssLoaded(true), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Show a minimal loading indicator if CSS isn't loaded yet
+  if (!cssLoaded) {
+    return (
+      <div style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        width: '100%', 
+        height: '100%', 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        backgroundColor: '#ffffff'
+      }}>
+        <div>Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <>
       <BrowserRouter>

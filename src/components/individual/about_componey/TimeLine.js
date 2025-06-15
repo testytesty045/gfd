@@ -1,7 +1,7 @@
 import React from "react";
 import { timelineData } from "../../../data/services.js";
 import styles from '../../styles/timeline.module.css';
-import timelineImage from "../../../assets/images/timeline.jpg";
+import timelineImage from "../../../assets/images/timeline.webp";
 
 
 const Timeline = () => {
