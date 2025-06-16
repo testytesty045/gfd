@@ -33,9 +33,9 @@ const ITServices = () => {
             {itServicesData.map((item) => (
               <div key={item.id} className="accordion-item">
                 <div className="header">
-                  <h3 style={{ color: "black", fontWeight: "bold" }}>
+                  <h2 style={{ color: "black", fontWeight: "bold", fontSize: "1.17em" }}>
                     {item.title}
-                  </h3>
+                  </h2>
                 </div>
                 <p className="expanded-content">{item.content}</p>
               </div>

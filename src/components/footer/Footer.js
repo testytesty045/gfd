@@ -146,7 +146,7 @@ const Footer = () => {
         >
           {/* Column 1 - Who we are */}
           <motion.div className="footer-column" variants={fadeInUp}>
-            <h5 className="footer-link">{footerText["footer-heading-one"]}</h5>
+            <h4 className="footer-link">{footerText["footer-heading-one"]}</h4>
             <p className="footer-p">
               <Link
                 to="/life-at-dg"
@@ -192,7 +192,7 @@ const Footer = () => {
 
           {/* Column 2 - Services */}
           <motion.div className="footer-column" variants={fadeInUp}>
-            <h5 className="footer-link">{footerText["footer-heading-two"]}</h5>
+            <h4 className="footer-link">{footerText["footer-heading-two"]}</h4>
             <p className="footer-p">
               <Link
                 to="/managed-services"
@@ -252,9 +252,9 @@ const Footer = () => {
 
           {/* Column 3 - Case Study */}
           <motion.div className="footer-column" variants={fadeInUp}>
-            <h5 className="footer-link">
+            <h4 className="footer-link">
               {footerText["footer-heading-three"]}
-            </h5>
+            </h4>
             <p className="footer-p">
               <Link
                 to="/success-story-finTech"
@@ -309,12 +309,13 @@ const Footer = () => {
 
           {/* Column 4 - Contact */}
           <motion.div className="footer-column" variants={fadeInUp}>
-            <h5 className="footer-link">{footerText["footer-heading-four"]}</h5>
+            <h4 className="footer-link">{footerText["footer-heading-four"]}</h4>
             <div className="social-links">
               <Link
                 to="https://www.linkedin.com/company/dgfuturetech/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <motion.span
                   style={{ display: "inline-block" }}
@@ -327,6 +328,7 @@ const Footer = () => {
                 to="https://www.facebook.com/profile.php?id=61553733212792"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <motion.span
                   style={{ display: "inline-block" }}
@@ -339,6 +341,7 @@ const Footer = () => {
                 to="https://wa.me/+919175222091"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="WhatsApp"
               >
                 <motion.span
                   style={{ display: "inline-block" }}
@@ -356,7 +359,7 @@ const Footer = () => {
 
           {/* Column 5 - ISO Certification */}
           <motion.div className="footer-column" variants={fadeInUp}>
-            <h5 className="footer-link-iso">ISO 27001:2022</h5>
+            <h4 className="footer-link-iso">ISO 27001:2022</h4>
             <motion.img
               src={isocertificate}
               alt="ISO Certification"

@@ -132,6 +132,7 @@ const ITServices = () => {
               className={`${styles.navButton1} ${styles.prev}`}
               onClick={prevSlide}
               disabled={currentIndex === 0}
+              aria-label="Previous slide"
             >
               <GrFormPrevious />
             </button>
@@ -139,6 +140,7 @@ const ITServices = () => {
               className={`${styles.navButton1} ${styles.next}`}
               onClick={nextSlide}
               disabled={currentIndex >= itServices.length - cardsPerView}
+              aria-label="Next slide"
             >
               <GrFormNext />
             </button>
@@ -153,6 +155,8 @@ const ITServices = () => {
               key={index}
               className={`${styles.dot1} ${index === currentIndex ? styles.active : ""}`}
               onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === currentIndex ? "true" : "false"}
             />
           ))}
         </div>

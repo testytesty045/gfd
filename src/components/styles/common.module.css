@@ -779,26 +779,42 @@
 .carouselDots1 {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 16px;
     margin-top: 24px;
 }
 
 .dot1 {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background-color: #ddd;
     border: none;
     padding: 0;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.dot1:hover {
+.dot1::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot1:hover::after {
     transform: scale(1.2);
 }
 
-.dot1.active {
+.dot1.active::after {
     background-color: var(--highlight-title);
     transform: scale(1.2);
 }
@@ -1553,14 +1569,17 @@
 }
 
 .cookieBanner button.accept {
-    background-color: #1FCBED;
+    background-color: #0072CE; /* Darker blue for better contrast */
     color: white;
+    font-weight: bold;
+    border: 2px solid #0072CE;
 }
 
 .cookieBanner button.decline {
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
+    font-weight: bold;
 }
 
 /* Mobile adjustments for cookie banner */

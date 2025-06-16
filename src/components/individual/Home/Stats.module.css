@@ -35,7 +35,7 @@
     width: 100%;
   }
   
-  .stat-item h3 {
+  .stat-item h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: clamp(16px, 2vw, 20px);
@@ -179,7 +179,7 @@
       padding: 8px 5px;
     }
   
-    .stat-item h3 {
+    .stat-item h2 {
       font-size: 14px;
     }
     
@@ -216,11 +216,26 @@
       font-size: 18px;
     }
   
-    .stat-item h3 {
+    .stat-item h2 {
       font-size: 13px;
     }
     
     .stat-content {
       gap: 6px;
+    }
+  }
+  
+  /* Add styling for the new heading class */
+  .stat-heading {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .stat-heading {
+        font-size: 1rem;
     }
   }

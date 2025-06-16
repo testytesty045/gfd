@@ -7,7 +7,7 @@ const Stats = () => {
             <div className={styles["stat-item"]}>
                 <div className={styles["stat-content"]}>
                     <div className={styles["client-satisfaction"]} aria-hidden="true"></div>
-                    <h3>Client Satisfaction</h3>
+                    <h2 className={styles["stat-heading"]}>Client Satisfaction</h2>
                 </div>
             </div>
 
@@ -16,7 +16,7 @@ const Stats = () => {
                     <div className={styles["years"]}>
                         <div className={styles["stat-number"]}>12</div>
                     </div>
-                    <h3>Years in the Industry</h3>
+                    <h2 className={styles["stat-heading"]}>Years in the Industry</h2>
                 </div>
             </div>
 
@@ -29,14 +29,14 @@ const Stats = () => {
                         <span className={styles["stat-separator"]}>×</span>
                         <span className={styles["stat-number"]}>365</span>
                     </div>
-                    <h3>Support</h3>
+                    <h2 className={styles["stat-heading"]}>Support</h2>
                 </div>
             </div>
 
             <div className={styles["stat-item"]}>
                 <div className={styles["stat-content"]}>
                     <div className={styles["iso-certified"]} aria-hidden="true"></div>
-                    <h3>ISO Certified</h3>
+                    <h2 className={styles["stat-heading"]}>ISO Certified</h2>
                 </div>
             </div>
         </div>

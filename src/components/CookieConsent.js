@@ -52,13 +52,27 @@ const CookieConsent = () => {
       }}
       aria-hidden={!showBanner}
     >
-      <p>
+      <p id="cookie-consent-description">
         We use cookies to enhance your experience. By continuing to visit this
         site you agree to our use of cookies.
       </p>
       <div>
-        <button onClick={declineCookies} className={styles.decline}>Decline</button>
-        <button onClick={acceptCookies} className={styles.accept}>Accept</button>
+        <button 
+          onClick={declineCookies} 
+          className={styles.decline}
+          aria-label="Decline cookies"
+          aria-describedby="cookie-consent-description"
+        >
+          Decline
+        </button>
+        <button 
+          onClick={acceptCookies} 
+          className={styles.accept}
+          aria-label="Accept cookies"
+          aria-describedby="cookie-consent-description"
+        >
+          Accept
+        </button>
       </div>
     </div>
   );
