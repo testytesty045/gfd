@@ -12,6 +12,10 @@
     margin-bottom: 0;
     padding: 0 0 40px;
     overflow: hidden; /* Add this to contain video */
+    /* Add placeholder background color while video loads */
+    background-color: #000;
+    /* Add aspect ratio to prevent layout shift */
+    aspect-ratio: 16 / 9;
 }
 
 .video-background {
@@ -22,6 +26,16 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    will-change: transform; /* Hardware acceleration hint */
+    /* Add loading optimization */
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    transform: translate3d(0, 0, 0); /* Force GPU rendering */
+}
+
+.video-background.loaded {
+    opacity: 1;
 }
 
 .video-overlay {
@@ -179,6 +193,7 @@
   
   @media (max-width: 768px) {
     .homeHero {
+      aspect-ratio: auto;
       width: 95%;
       min-height: 100vh; /* Allow full height */
       padding: 20px 0 40px;
@@ -308,4 +323,28 @@
   display: flex;
   justify-content: flex-start;
   margin-bottom: 30px;
+}
+
+.homeHero__content.static-content {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 0;
+    margin-top: 70px;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.homeHero__content.static-content h1,
+.homeHero__content.static-content p {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

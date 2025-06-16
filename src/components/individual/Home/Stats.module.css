@@ -49,7 +49,7 @@
   .client-satisfaction {
     width: clamp(70px, 10vw, 100px);
     height: clamp(70px, 10vw, 100px);
-    background: url("/src/assets/icons/Client_Satisfaction.png") center / contain no-repeat;
+    background: url("/src/assets/icons/Client_Satisfaction.webp") center / contain no-repeat;
     flex-shrink: 0;
   }
   
