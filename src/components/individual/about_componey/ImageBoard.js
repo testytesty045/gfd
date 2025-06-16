@@ -76,7 +76,7 @@ const ImageBoard = () => {
                   width="250"
                   height="250"
                   decoding="async"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, 250px"
                   onError={(e) => {
                     e.target.onerror = null;
@@ -101,7 +101,7 @@ const ImageBoard = () => {
                   width="250"
                   height="250"
                   decoding="async"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   sizes="(max-width: 768px) 100vw, 250px"
                   onError={(e) => {
                     e.target.onerror = null;

@@ -17,20 +17,26 @@ const CookieConsent = () => {
       // Small delay to ensure the banner space is reserved before showing
       const timer = setTimeout(() => {
         setShowBanner(true);
-      }, 100);
-      return () => clearTimeout(timer);
+        
+        // Add a class to the document body when cookie banner is shown
+        document.body.classList.add('cookie-banner-visible');
+      }, 300);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, []);
 
-  const acceptCookies = () => {
-    setCookie("cookie_consent", "true", 365);
+  const handleConsent = (accepted) => {
+    setCookie("cookie_consent", accepted ? "true" : "false", 365);
     setShowBanner(false);
+    
+    // Remove the class from body when cookie banner is hidden
+    document.body.classList.remove('cookie-banner-visible');
   };
   
-  const declineCookies = () => {
-    setCookie("cookie_consent", "false", 365);
-    setShowBanner(false);
-  };
+  const acceptCookies = () => handleConsent(true);
+  const declineCookies = () => handleConsent(false);
 
   // Always render the banner container, but control visibility with CSS
   return (
@@ -39,11 +45,12 @@ const CookieConsent = () => {
       style={{ 
         visibility: bannerLoaded ? (showBanner ? 'visible' : 'hidden') : 'hidden',
         opacity: showBanner ? 1 : 0,
-        transition: 'opacity 0.3s ease',
+        transition: 'opacity 0.3s ease, visibility 0.3s ease',
         pointerEvents: showBanner ? 'auto' : 'none',
         height: showBanner ? 'auto' : '0',
-        padding: showBanner ? '10px 20px' : '0'
+        padding: showBanner ? undefined : '0'
       }}
+      aria-hidden={!showBanner}
     >
       <p>
         We use cookies to enhance your experience. By continuing to visit this

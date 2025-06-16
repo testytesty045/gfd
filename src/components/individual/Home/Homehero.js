@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState, lazy, Suspense } from "react";
 import Button from "../../ui/Button";
 import "./Homehero.css";
+// Import local hero image as fallback
+import heroImage from "../../../assets/images/hero.webp";
 
 // Import framer-motion directly
 import { motion, useInView, LazyMotion, domAnimation } from 'framer-motion';
@@ -76,10 +78,10 @@ export default function HomeHero() {
         playsInline 
         className={`video-background ${isVideoLoaded ? 'loaded' : ''}`}
         preload="none"
-        poster="https://res.cloudinary.com/dcedehnw3/image/upload/c_scale,w_1280,q_auto:low/v1746707998/Video_for_hero_section_poster_aocobh.jpg" 
+        poster={heroImage} 
         onLoadedData={() => setIsVideoLoaded(true)}
         loading="lazy"
-        fetchpriority="low"
+        fetchPriority="low"
       >
         <source
           src="https://res.cloudinary.com/dcedehnw3/video/upload/c_scale,w_1280,q_auto:low,f_auto/v1746707998/Video_for_hero_section_aocobh.mp4"
