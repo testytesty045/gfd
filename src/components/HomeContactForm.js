@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import "./styles/Homecontatc.css";
-import contactImage from "../assets/images/contact_home.png";
+import contactImage from "../assets/images/contact_home.webp";
 
 
 const EMAIL_CONFIG = {

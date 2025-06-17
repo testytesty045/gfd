@@ -287,25 +287,9 @@ const Client = () => {
                                 border: 'none',
                                 padding: '0',
                                 cursor: 'pointer',
-                                transition: 'background-color 0.3s ease',
-                                minWidth: '44px',
-                                minHeight: '44px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                position: 'relative'
+                                transition: 'background-color 0.3s ease'
                             }}
-                        >
-                            <span
-                                style={{
-                                    width: '16px',
-                                    height: '16px',
-                                    borderRadius: '50%',
-                                    backgroundColor: index === currentIndex ? 'var(--highlight-title)' : '#ccc',
-                                    display: 'block'
-                                }}
-                            />
-                        </button>
+                        />
                     ))}
                 </div>
             )}

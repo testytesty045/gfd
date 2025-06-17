@@ -383,9 +383,10 @@
     }
     
     .dropdownMenu {
-        position: static;
+        position: relative;
         box-shadow: none;
         width: 100%;
+        margin-left: 0;
         margin-top: 0.5rem;
         padding: 0;
         background: transparent;

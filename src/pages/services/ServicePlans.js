@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/ServicePlans.css";
 import ScrollTriggeredContactForm from "../../components/ScrollTriggeredContactForm";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FaCheck, FaTimes } from "react-icons/fa";
 import PageTitle from "../../components/PageTitle";
 
 const ServicePlans = () => {
@@ -144,12 +144,12 @@ const ServicePlans = () => {
                     {service.basic ? (
                       <span className="check">
                         {" "}
-                        <i className="fas fa-check icon-circle blue-circle"></i>{" "}
+                        <FaCheck className="icon-circle blue-circle" />
                       </span>
                     ) : (
                       <span className="cross">
                         {" "}
-                        <i className="fas fa-times icon-circle gray-circle"></i>
+                        <FaTimes className="icon-circle gray-circle" />
                       </span>
                     )}
                   </td>
@@ -157,12 +157,12 @@ const ServicePlans = () => {
                     {service.standard ? (
                       <span className="check">
                         {" "}
-                        <i className="fas fa-check icon-circle blue-circle"></i>{" "}
+                        <FaCheck className="icon-circle blue-circle" />
                       </span>
                     ) : (
                       <span className="cross">
                         {" "}
-                        <i className="fas fa-times icon-circle gray-circle"></i>
+                        <FaTimes className="icon-circle gray-circle" />
                       </span>
                     )}
                   </td>
@@ -170,12 +170,12 @@ const ServicePlans = () => {
                     {service.premium ? (
                       <span className="check">
                         {" "}
-                        <i className="fas fa-check icon-circle blue-circle"></i>{" "}
+                        <FaCheck className="icon-circle blue-circle" />
                       </span>
                     ) : (
                       <span className="cross">
                         {" "}
-                        <i className="fas fa-times icon-circle gray-circle"></i>
+                        <FaTimes className="icon-circle gray-circle" />
                       </span>
                     )}
                   </td>

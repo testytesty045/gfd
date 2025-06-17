@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../styles/navbar.module.css';
-import companyLogo from '../../assets/images/logo.png';
+import companyLogo from '../../assets/images/logo.webp';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import MenuItem from './MenuItem';
 

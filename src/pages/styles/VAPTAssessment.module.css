@@ -1,12 +1,4 @@
-/* VAPTAssessment.module.css */
 
-.heroSection {
-  background-image: url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 5rem 0;
-}
 
 .heroSection::before {
   content: '';
@@ -19,21 +11,9 @@
   z-index: 1;
 }
 
-.heroContent {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-}
 
-.heroTitle {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: var(--spacing-lg);
-}
+
+
 
 .heroSubtitle {
   font-size: 24px;
@@ -63,10 +43,7 @@
   margin: 0 auto;
 }
 
-.highlight {
-  color: var(--dgft-primary);
-  font-weight: 600;
-}
+
 
 .servicesSection {
   padding: var(--spacing-xxl) 0;
@@ -490,15 +467,9 @@
   display: inline-block;
 }
 
-.phaseContent {
-  display: flex;
-  gap: var(--spacing-xl);
-}
 
-.phaseSection {
-  flex: 1;
-  position: relative;
-}
+
+
 
 .phaseSection::before {
   content: '';
@@ -512,18 +483,9 @@
   opacity: 0.3;
 }
 
-.phaseSectionTitle {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--dgft-primary);
-  margin-bottom: var(--spacing-md);
-  position: relative;
-}
 
-.phaseList {
-  list-style: none;
-  padding: 0;
-}
+
+
 
 .phaseItem {
   padding-left: 28px;

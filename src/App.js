@@ -31,33 +31,10 @@ import SuccessStory4 from "./pages/success-story-4.js";
 import SuccessStory5 from "./pages/success-story-5.js";
 import CookieConsent from "./components/CookieConsent.js";
 
-// Font preloading function
-const preloadFonts = () => {
-  // List of fonts to preload
-  const fontUrls = [
-    'https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2',
-    'https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2'
-  ];
-
-  // Create preload links
-  fontUrls.forEach(url => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = url;
-    link.as = 'font';
-    link.type = 'font/woff2';
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
-  });
-};
-
 function App() {
   const [cssLoaded, setCssLoaded] = useState(false);
 
   useEffect(() => {
-    // Preload fonts
-    preloadFonts();
-    
     // Check if main CSS is loaded
     const links = document.querySelectorAll('link[rel="stylesheet"]');
     let allLoaded = true;

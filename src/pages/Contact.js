@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
 import PageTitle from "../components/PageTitle";
 
-import contactImage from "../../src/assets/images/contact-right-iamge.png";
+import contactImage from "../../src/assets/images/contact-right-iamge.webp";
 import ContactForm from "../components/individual/ContactForm";
 
 const Contact = () => {

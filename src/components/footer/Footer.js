@@ -11,7 +11,7 @@ import {
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { footerText } from "../../data/services";
 
-import logofooter from "../../assets/images/logo.png";
+import logofooter from "../../assets/images/logo.webp";
 import garagelogo from "../../assets/images/garage.webp";
 import isocertificate from "../../assets/images/iso_certification.webp";
 import footerbootm from "../../assets/images/logo_dgg (1).svg";

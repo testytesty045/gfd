@@ -6,7 +6,7 @@ import heroImage from "../../assets/images/hero.png";
 import ServicesBanner from "../../components/common/ServicesBanner";
 import UseCasesSection from "../../components/UseCasesSection";
 import PageTitle from "../../components/PageTitle";
-import mangaitimg from "../../assets/images/manageit.jpg";
+import mangaitimg from "../../assets/images/manageit.webp";
 import CTASection from "../../components/common/CTASection";
 import ServiceSection from "./ServiceSection";
 
